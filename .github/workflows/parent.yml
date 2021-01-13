@@ -27,6 +27,7 @@ jobs:
         with:
           workflow: First
           token: ${{ secrets.GH_REPO_BM }}
+          inputs: '{ "auto": "Audi" }'
           
       - name: Invoke deployment workflow
         uses: benc-uk/workflow-dispatch@v1
