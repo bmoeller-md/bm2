@@ -26,12 +26,13 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: First
-          token: ${{ secrets.GH_REPO_MCBS }}
+          token: ${{ secrets.GH_REPO_BM }}
           
       - name: Invoke deployment workflow
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: Second
+          token: ${{ secrets.GH_REPO_BM }}
 
       - name: Run a one-line script
         run: | 
