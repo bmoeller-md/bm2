@@ -26,11 +26,14 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: First
+          token: ${{ secrets.GH_REPO_MCBS }}
           
       - name: Invoke deployment workflow
         uses: benc-uk/workflow-dispatch@v1
         with:
           workflow: Second
 
-
+      - name: Run a one-line script
+        run: | 
+          echo "Ich bin wieder der Parent ..."
       
