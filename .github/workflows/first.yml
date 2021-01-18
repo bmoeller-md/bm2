@@ -26,5 +26,6 @@ jobs:
           echo "Ich bin der erste ... mit einem ${{ github.event.inputs.auto }}"
           sleep 10
           touch first.b
+          ls -l
 
       
