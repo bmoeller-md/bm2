@@ -24,5 +24,6 @@ jobs:
       - name: Run a one-line script
         run: | 
           echo "Ich bin der erste ... mit einem ${{ github.event.inputs.auto }}"
+          sleep 6000
 
       
