@@ -17,6 +17,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      
+      # Repository auschecken unter $GITHUB_WORKSPACE
+      - name: checkout Repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: | 
