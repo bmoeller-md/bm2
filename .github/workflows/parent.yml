@@ -21,6 +21,7 @@ jobs:
       - name: Run a one-line script
         run: | 
           echo "Ich bin der Parent ..."
+          ls -l
           
       - name: Invoke deployment workflow
         uses: benc-uk/workflow-dispatch@v1
@@ -29,6 +30,11 @@ jobs:
           token: ${{ secrets.GH_REPO_BM }}
           inputs: '{ "auto": "Audi" }'
           
+      - name: run ...
+        run: |
+          touch b.b
+        
+              
       - name: Invoke deployment workflow
         uses: benc-uk/workflow-dispatch@v1
         with:
@@ -38,4 +44,5 @@ jobs:
       - name: Run a one-line script
         run: | 
           echo "Ich bin wieder der Parent ..."
+          ls -l
       
