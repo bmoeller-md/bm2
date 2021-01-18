@@ -22,5 +22,6 @@ jobs:
         run: | 
           echo "Ich bin der zweite ..."
           touch zweites.txt
+          echo "$(date +'%d/%m/%Y %H:%M:%S:%3N')"
 
       
