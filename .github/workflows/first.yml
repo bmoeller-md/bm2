@@ -24,7 +24,7 @@ jobs:
       - name: Run a one-line script
         run: | 
           echo "Ich bin der erste ... mit einem ${{ github.event.inputs.auto }}"
-          sleep 100
+          echo "$(date +'%d/%m/%Y %H:%M:%S:%3N')"
           touch first.b
           ls -l
 
