@@ -28,6 +28,7 @@ jobs:
       - name: Run a one-line script
         run: | 
           echo "Ich bin der Parent ..."
+          echo $time
           ls -l
           
       - name: Invoke deployment workflow
@@ -40,6 +41,7 @@ jobs:
       - name: run ...
         run: |
           touch b.b
+          echo $time
         
               
       - name: Invoke deployment workflow
@@ -51,5 +53,6 @@ jobs:
       - name: Run a one-line script
         run: | 
           echo "Ich bin wieder der Parent ..."
+          echo $time
           ls -l
       
