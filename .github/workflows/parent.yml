@@ -46,6 +46,7 @@ jobs:
               
       - name: Invoke deployment workflow
         uses: benc-uk/workflow-dispatch@v1
+        if: success()
         with:
           workflow: Second
           token: ${{ secrets.GH_REPO_BM }}
