@@ -39,6 +39,7 @@ jobs:
           inputs: '{ "auto": "Audi" }'
           
       - name: run ...
+        if: success()
         run: |
           touch b.b
           echo "$(date +'%d/%m/%Y %H:%M:%S:%3N')"
@@ -52,6 +53,7 @@ jobs:
           token: ${{ secrets.GH_REPO_BM }}
 
       - name: Run a one-line script
+        if: success()
         run: | 
           echo "Ich bin wieder der Parent ..."
           echo "$(date +'%d/%m/%Y %H:%M:%S:%3N')"
